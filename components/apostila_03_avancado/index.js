@@ -1,54 +1,53 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableOpacity} from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
 import Botao from './botao';
 
 import styles from './styles';
 
-export default function apostila03() {
+export default function Apostila03() {
 
   const [contador, setContador] = useState(0);
 
-    function AddNumber(){
-      setContador(contador+1);
-        }
+function AddNumber(){
+  setContador(contador + 1);
+  console.log(contador);
+}
 
-    function SubNumber(){
-     setContador(contador-1);
-        }
+function dirNumber(){
+  setContador(contador - 1);
+  console.log(contador);
+}
 
-    function ZeroNumber(){
-     setContador(contador=0);
-    }    
+function zerNumber(){
+  setContador(contador - contador);
+  console.log(contador);
+}
 
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>Exemplo apostila 3</Text>
+        
+        <View style={styles.counter}>
+          <View style={styles.horizontal}>
+          <Botao sinal={'-'}/ >
 
-      <Text style={styles.textCounter}>{contador}</Text>
+          <Text style={styles.textCounter}>{contador}</Text>
 
+          <Botao sinal={'+'} / >
+
+          </View>
+        
+    
       <TouchableOpacity 
-        style={styles.button}
-        onPress={() => AddNumber()}
-      >
-        <Text style={styles.textButton}>Somar +1</Text>
+        style={[styles.button, {borderRadius:30}]}
+        onPress={() => zerNumber ()}
+        >
+        <Text style={styles.textButton}>ZERO</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={() => SubNumber()}
-      >
-        <Text style={styles.textButton}>Subtrair -1</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={() => ZeroNumber()}
-      >
-        <Text style={styles.textButton}>Zerar</Text>
-      </TouchableOpacity>
+      
+        </View>  
 
     </View>
   );
 }
-
