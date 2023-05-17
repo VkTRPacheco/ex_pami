@@ -7,7 +7,7 @@ import Apostila03A from './components/apostila_03_avancado';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Apostila03 />
+      <Apostila03A />
       <StatusBar style="auto" />
     </View>
   );

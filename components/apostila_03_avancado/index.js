@@ -5,7 +5,7 @@ import Botao from './botao';
 
 import styles from './styles';
 
-export default function Apostila03() {
+export default function Apostila03A() {
 
   const [contador, setContador] = useState(0);
 
@@ -30,11 +30,11 @@ function zerNumber(){
         
         <View style={styles.counter}>
           <View style={styles.horizontal}>
-          <Botao sinal={'-'}/ >
+          <Botao sinal={'-'} funcao={SubNumber} / >
 
           <Text style={styles.textCounter}>{contador}</Text>
 
-          <Botao sinal={'+'} / >
+          <Botao sinal={'+'} funcao={AddNumber}/ >
 
           </View>
         
