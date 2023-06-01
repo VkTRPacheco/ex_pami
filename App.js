@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native'; 
+import apostila_04 from './components/apostila_04';
 
-
-import Apostila03A from './components/apostila_03_avancado';
+import apostila_04 from './components/apostila_04';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Apostila03A />
+      <apostila_04 />
       <StatusBar style="auto" />
     </View>
   );
