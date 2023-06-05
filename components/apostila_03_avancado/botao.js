@@ -1,4 +1,3 @@
-botao.js
 import { Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
